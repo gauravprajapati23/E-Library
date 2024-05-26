@@ -6,34 +6,37 @@
     <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FE-Library.jpg?alt=media&token=6085c747-52f7-42eb-b442-9ad35595e7eb" type="image/x-icon">
     <title>E-Library</title>
     <style>
-        body {
+body {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #D3D3D3;
+            background-color: darkgrey;     
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .header {
+.header {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 20px 0;
     text-align: center;
     width: 100%;
+    height: 100%;
 }
 
 .header-content {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
 }
-        .footer {
+.footer {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 20px 0;
+    padding: 0;
     text-align: center;
-    margin-top: auto; /* Ensures footer stays at the bottom */
-    width: 100%;
+    margin-top: auto;
+    width: 100%;    
 }
 
 .footer-content {
@@ -77,7 +80,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 200px;
+            width: 350px;
             text-align: center;
             padding: 10px;
         }
@@ -107,6 +110,74 @@
         .book-card button:hover {
             background-color: #ff4500;
         }
+.about-us {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-us h2:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ff6600;
+    margin: 10px auto 0;
+}
+
+.team-member {
+    display: inline-block;
+    width: 400px;
+    margin: 10px;
+}
+
+.team-member-content {
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.team-member-content:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    max-width: 93%;
+    height: auto;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.team-member p {
+    color: #666;
+    margin: 0 0 20px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
     </style>
 </head>
 <body>
@@ -130,12 +201,12 @@
         </div>
         <!-- Repeat for other books -->
         <div class="book-card">
-            <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FBC.jpg?alt=media&token=09da3c12-2710-44f8-82fe-257ef3904cb9" alt="Book 2">
+            <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FBC.jpg?alt=media&token=7cd7fbc8-a727-4496-96da-d757f82af8dd" alt="Book 2">
             <h3>Blockchain Tech</h3>
             <p>5th Semester</p>
             <p>Third-Year</p>
             <p>Computer Science</p>
-            <button onclick="location.href='';">Updating...</button>
+            <button onclick="location.href='https://drive.google.com/file/d/18ISuskojFvmQ-1dgOr4oQiWbwctZoLR2/view?usp=drivesdk';">View PDF</button>
         </div>
         <div class="book-card">
             <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FOs.jpg?alt=media&token=bf1963e3-ccc5-44c9-9851-e29e6eb58a5d" alt="Book 3">
@@ -188,11 +259,38 @@
         </div>
     </div>
 <br>
-<br>
+ <section class="about-us">
+        <h2>About Me</h2>
+        <div class="team-member">
+            <div class="team-member-content">
+                <img src="https://firebasestorage.googleapis.com/v0/b/itsgaurav-23.appspot.com/o/Portfolio%2Fgaurav.jpg?alt=media&token=821a85fb-319a-4ee0-b9e1-50ea48d67e98" alt="Gaurav Prajapati">
+                <h3>Gaurav Prajapati</h3>
+                <a href="https://itsgaurav-23.web.app">Visit Portfolio</a>
+                <div class="social-icons">
+                    <br><br>
+                   <a href="https://github.com/thematrix09">
+        <img src="https://firebasestorage.googleapis.com/v0/b/itsgaurav-23.appspot.com/o/Portfolio%2Fgithub.png?alt=media&token=f82e01f1-f30f-4ce1-96a5-17eac24f3315">
+    </a>
+    <a href="https://www.instagram.com/its_gaurav._.23?igsh=azIwNDY5emVsZmQx">
+        <img src="https://firebasestorage.googleapis.com/v0/b/itsgaurav-23.appspot.com/o/Portfolio%2Finsta.png?alt=media&token=6176bc4d-dfad-484b-86b3-5d91570f085e">
+    </a>
+    <a href="mailto:gauravprajapati041@gmail.com">
+        <img src="https://firebasestorage.googleapis.com/v0/b/itsgaurav-23.appspot.com/o/Portfolio%2Fgmail.png?alt=media&token=8154eb8f-77b6-4aa0-a1ed-12940b4d2d0d">
+    </a>
+    <a href="https://www.linkedin.com/in/gaurav-prajapati-b08505259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+        <img src="https://firebasestorage.googleapis.com/v0/b/itsgaurav-23.appspot.com/o/Portfolio%2Fin.png?alt=media&token=5da25603-d236-4046-852b-e53e578b9cee">
+    </a>
+    <br>
+                </div>    
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
 <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2024 E-Library. All rights reserved.</p>
-            <p>Contact us at gauravprajapati041@gmail.com</p>
+            <p>Contact us at :- <a href="mailto: gauravprajapati041@gmail.com">gauravprajapati041@gmail.com</a></p>
         </div>
     </footer>
 </body>
