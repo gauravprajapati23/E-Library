@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-library</title>
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FE-Library.jpg?alt=media&token=6085c747-52f7-42eb-b442-9ad35595e7eb" type="image/x-icon">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Flogin.css?alt=media&token=1f6b85c6-7b77-4e79-9d77-61e695e9dddb">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fstyles.css?alt=media&token=70e281b5-f5cb-4086-89c0-b3118a6c5923"/>
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FE-Library.jpg?alt=media&token=6085c747-52f7-42eb-b442-9ad35595e7eb" type="image/x-icon">
+</head>
+<body>
+    <!-- Main Section with Content -->
+   <main id="mainSection" class="main-section">
+    <header class="header">        
+        <nav class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fheader.png?alt=media&token=bdca985d-1661-4c53-b3bc-16981b11de3c" alt="Logo">
+                </div>
+                <ul class="nav-tabs">
+                    <li><a href="#home">Home <i class="fas fa-home icon"></i></a></li>
+                    <li><a href="#books">Books <i class="fas fa-book icon"></i></a></li>
+                    <li><a href="#contact">Contact <i class="fas fa-comments icon"></i></a></li>
+                    <li><a href="#about">About <i class="fas fa-user icon"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="navigation1">
+    <div class="floating-menu-button" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="menu-drawer" id="menuDrawer">
+        <div class="menu-item" onclick="navigateTo('home'),showSection('home')"><i class="fa fa-home icon"></i> Home</div>
+        <div class="menu-item" onclick="navigateTo('books'),showSection('books')"><i class="fa fa-book icon"></i> Books</div>
+        <div class="menu-item" onclick="navigateTo('contact'),showSection('contact')"><i class="fa fa-comments icon"></i> Contact</div>
+        <div class="menu-item" onclick="navigateTo('about'),showSection('about')"><i class="fa fa-user icon"></i> About</div>
+        <div class="menu-item" onclick="logout()"><i class="fa fa-sign-out-alt icon"></i> Logout</div>
+    </div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fheader.png?alt=media&token=bdca985d-1661-4c53-b3bc-16981b11de3c" alt="header" class="header-img"/>
+    </div>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <h1 class="greet"> WELCOME TO <br><span>BOOK STORE</span> </h1>
+            <div class="container">
+            <p class="item">
+               Welcome to our bookstore, a haven for students seeking knowledge and inspiration. Discover an extensive collection of textbooks, reference materials, and captivating reads tailored to support your academic journey.  Dive into a world of learning and let your curiosity guide you to new heights.
+            </p>
+            <div class="main_img">
+                <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fbg%20img.avif?alt=media&token=373ae187-8d00-4850-bfd6-3b8fcfae5c4d">
+            </div>
+            </div>
+            <div class="blockquote item">
+               <b> "Books are a uniquely portable magic. They let you travel without moving your feet, provide an escape from the confines of reality, and give wings to the imagination. Reading is essential for those who seek to rise above the ordinary and immerse themselves in the extraordinary."</b><span class="spanred"> – Stephen King</span>
+            </div>
+            <a href="#about" class="main_btn item">About Us<i class="fas fa-user"></i></a>
+        </section>
+        <br>
+        <section class="books" id="books">
+            <h1>Books <i class="fas fa-book icon"></i></h1>
+            <p class="note">(Note : Books which are not available now will be added soon)</p>
+            <div class="Books" id="Books">
+            <h2>FY-BCS (SEM 1-2)</h2>          
+            <div class="Books_book_box">
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fc%201.jpg?alt=media&token=a4d275bd-dc09-4ce8-b4e7-3da6d374348f">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>C Programing</h2>
+                    <p class="writer">1st Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1G03FRq9WE52L0iP0yh-eWYJt1CGPnmFT/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FDBMS%201.jpeg?alt=media&token=362e68ba-f528-4396-a403-49142dc3dce8">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>DBMS</h2>
+                    <p class="writer">1st Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1G47UuWArT2IJG_lrK1DItu6rB3Dq2b_l/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fdiscrete%20math%201.jpg?alt=media&token=0f15fa0b-fbf4-42e5-8ea7-373da5e13b2f">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Discrete Mathematics</h2>
+                    <p class="writer">1st Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DFeFpEG8S35-FeZXBBf6W3lCA1j4jngS/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fdescriptive%20stat%201.jpg?alt=media&token=ea08f2cd-89f9-4fc3-a824-32fc941d5443">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Descriptive Statistics</h2>
+                    <p class="writer">1st Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DDZECyGhSPgltSj_Y4ZB1YSAv8iLlFso/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fmathematical%20stat%201.jpg?alt=media&token=8877342a-c148-419d-8380-3813fc749717">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Mathematical Statistics</h2>
+                    <p class="writer">1st Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DO06aFOkHboO_f7uDuQEw6tWxupRqoV0/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fadv%20c%202.jpg?alt=media&token=73ead708-1338-479f-a0bd-1a0cfe01d416">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Advanced C</h2>
+                    <p class="writer">2nd Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DBpXBLbTEcI6jFLplRZmypcwBXYD0Qnd/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FRDBMS%202.jpg?alt=media&token=261a682d-d3c5-4e97-9829-06092d81f21e">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>RDBMS</h2>
+                    <p class="writer">2nd Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DOIzxef53Q42EKu-PQ6mEUBKKun30TXB/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Flinear%20algebra%202.jpg?alt=media&token=496d76f1-649f-4079-a61c-da35bcb4b95d">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Linear Algebra</h2>
+                    <p class="writer">2nd Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DJkS__j-CkGCU_k57oMXC6L_4FG4I_qw/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Finstrumentation%202.jpg?alt=media&token=9d7f994a-16d4-46e7-8a5f-fba4b7dcbac6">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Instrumentation System</h2>
+                    <p class="writer">2nd Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DJUVAf1j9AEVygjNDxxvhWrYOpjrxX9e/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fapplied%20stat%202.jpg?alt=media&token=62d59056-25db-4caa-a465-5c1c3db9ca53">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Applied Statistics</h2>
+                    <p class="writer">2nd Semester</p>
+                    <div class="categories">First-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1DCSSrdxHlW_kU9TTO8YKaSgThC5GLWP7/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+        </div>
+        </div>
+        <br>
+        <br>
+           <div class="Books" id="Books">
+            <h2>SY-BCS (SEM 3-4)</h2>              
+            <div class="Books_book_box">
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fdsa%203.png?alt=media&token=1014e09f-9b09-446a-ab06-b4d53b056ff4">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>DSA - I</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15MJEMa4cTprCd8EpMtzt484Npk844dKY/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fse%203.png?alt=media&token=4a08e22d-9bc7-4d16-b137-0053a58255a0">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Software Engineering</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15_jMEJcoeN6OrryTCNi6X9-t0jxoWyru/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FGroup%20Coding%203.png?alt=media&token=1ee1fa84-b65d-4881-b28d-8d7304a2b935">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Groups and Coding Theory</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15S8CD9suG0TTNNfgXIXp9kbhmQf_L7dk/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+               <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fnumerical%203.png?alt=media&token=409f6c6d-1553-4a6c-ad19-d7e8ebc00833">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Numerical Techniques</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15ZssaWtU02qx4k_F5kNztShbGcuXkmnf/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fmicrocontroller%203.png?alt=media&token=35b78773-26dd-40e7-9fcb-2579bf66e326">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Microcontroller Architecture</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15YAg30JQuNHUuqJyoACZ-jqj9OeEUVIy/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FNetworking%203.png?alt=media&token=eb81b4a0-e078-49c4-84b2-29586aa908e9">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Digital Communication</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15PpP675xXSuyV-neRc5tYpqpx0ANsean/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FEnglish.jpg?alt=media&token=09a93b11-757a-4276-a027-ebf4250d77ce">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Language Comunication- I</h2>
+                    <p class="writer">3rd Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15aPImnRQYhgLRMBxuAyJc7El4_256EKN/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fdsa%204.png?alt=media&token=5cd71d8a-ef92-4180-ad18-95a19d868a78">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>DSA - II</h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15gsD7NZvfg7nJWMtQ0n5vLv3fxrHvKcP/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fcn%204.png?alt=media&token=08fc4f2d-2544-49f8-90a1-57e95c0f9af7">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Computer Networking - I</h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/17J7V8YhVK89u1jVGLcIhfEKLX4T-anvI/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fcomputational%204.png?alt=media&token=062b6cdc-80e6-4885-b015-9aded59d8f68">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Computational Geometry </h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15ccEZ9vmmH3IFkW6IDmFRr0l5Snt2Ezp/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Foperational%204.png?alt=media&token=2ac60619-db2b-404f-abb4-5d4b5d301289">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Operational Research</h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15q8x5VoDk_Y2bruy_Es3ME7sowXunyOf/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fembedded%204.png?alt=media&token=dd466802-328b-4070-8bd7-16c0f57e1e36">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Embedded System Design</h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15jtNgXXt5uQ_U3rZVyNB79scwdaoizhR/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fwireless%204.png?alt=media&token=4296b62d-e2cb-4642-8d98-0177862f2005">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Wireless Communication</h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15qFa8WmYxQb_BSxFPK6eSWVCVwi5oDzV/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FEnglish.jpg?alt=media&token=09a93b11-757a-4276-a027-ebf4250d77ce">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Language Comunication- II</h2>
+                    <p class="writer">4th Semester</p>
+                    <div class="categories">Second-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/15oaT71wf3q7IvyjxoYVsh86BAae8Q0xX/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+        </div>
+       </div>
+            <br>
+            <br>
+            <div class="Books" id="Books">
+            <h2>TY-BCS (SEM 5-6)</h2>              
+            <div class="Books_book_box">
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FJava.jpg?alt=media&token=104512f9-6249-4efb-a2f9-9a1a64f6a9e9">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Object-Oriented Java - I</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1L9PqfvVL1pjmIkL-CYGQjYwRhotiBI5j/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FBC.jpg?alt=media&token=7cd7fbc8-a727-4496-96da-d757f82af8dd">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Blockchain Tech</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/18ISuskojFvmQ-1dgOr4oQiWbwctZoLR2/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FOs.jpg?alt=media&token=bf1963e3-ccc5-44c9-9851-e29e6eb58a5d">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Operating Systems - I</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1LCA1oYYRZ285WjzIuKbFoIHAepVRk13r/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+               <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FPython.jpg?alt=media&token=35f71c15-b0ea-4668-9c5b-e2f25fbe517c">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Python Programming</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1LE4IcwhPp-fBifC5o2WOQyfM0q2Vp8jc/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FTCS.jpg?alt=media&token=23c1794d-bb7d-4fb9-a687-b5fff7e2b780">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>TCS Book</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1LEPawmQLGGHLICuW2Bhai2nD1lg4lelh/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FDS.jpg?alt=media&token=08fbe1fe-2505-4070-9adb-89dd4493d670">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Data Science</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1L8SBKVc97DoxtDi_zmmXI6DjkibWY81U/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FWeb.jpg?alt=media&token=9155dd2e-a3d5-459e-b109-14cb412890c7">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Web Technology - I</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1LEfS7X1ygRLs8tkWH84dF2jpKAx3DpE7/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+            <div class="Books_book_card">
+                <div class="Books_book_img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FCN-2.jpg?alt=media&token=5ff458ff-eb59-4ce8-8f20-302200c18257">
+                </div>
+                <div class="Books_book_tag">
+                    <h2>Computer Network - II</h2>
+                    <p class="writer">5th Semester</p>
+                    <div class="categories">Third-Year</div>
+                    <p class="book_price">Computer Science<sub></sub></p>
+                    <a href="https://drive.google.com/file/d/1L7AwTDMeAWAOhCXW0mqeHH2ofenXMxZs/view?usp=drivesdk" class="f_btn">View PDF</a>
+                </div>               
+            </div>
+        </div>
+        </div>
+     </section>
+     <br>
+     <br>
+     <section class="review" id="review">
+     <h2>Reviews <i class="fas fa-comment icon"></i></h2>
+     <div class="review-section container mt-5">
+         <br>
+         <div class="row">
+            <div class="card col-md-4">
+                <div class="card-body">
+                    <div class="review-header d-flex align-items-center mb-2">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Freview%201.jpg?alt=media&token=62b73cf3-6b17-41fe-980d-3c2ab48e230b" alt="Review 1">
+                        <h3 class="h5 mb-0">Nikita Ware</h3>
+                    </div>
+                    <p class="card-text">This e-library site has been an absolute gem for me! It's so easy to use and has a massive collection of books covering every topic imaginable. I've found it incredibly convenient to explore new reads and dive into different genres. Highly recommended for anyone who loves books!</p>
+                    </div>
+                    <div class="text-warning icon star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </div>
+            </div>
+            <br>
+            <div class="card col-md-4">
+                <div class="card-body">
+                    <div class="review-header d-flex align-items-center mb-2">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Freview%202.jpg?alt=media&token=68688105-65d5-4296-9e89-a86545f3a59a" alt="Review 2">
+                        <h3 class="h5 mb-0">Mohit Chavan</h3>
+                    </div>
+                    <p class="card-text">I've been really pleased with this e-library site. It offers a wide range of books that cater to diverse interests, which is fantastic. The only downside is sometimes navigating between categories can be a bit tricky, especially on smaller screens. Despite that, it's definitely worth checking out if you're looking for a great selection of reading material.</p>
+                    </div>
+                    <div class="text-warning icon star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                    </div>                    
+            </div>
+            <br>
+             <div class="card col-md-4">
+                <div class="card-body">
+                    <div class="review-header d-flex align-items-center mb-2">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Freview%203.jpg?alt=media&token=961f2e7f-d5d5-48b7-896a-91fce83ddb99" alt="Review 3">
+                        <h3 class="h5 mb-0">Vaijayanta Pingle</h3>
+                    </div>
+                    <p class="card-text">I've found this e-library site to be a valuable resource for discovering new books. It has a robust collection across various genres, making it easy to find something interesting to read. Although I've noticed a few navigation issues now and then, overall, it's been a reliable platform for my reading needs.</p>
+                    </div>
+                    <div class="text-warning icon star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                    </div>                    
+            </div>
+            <br>
+             <div class="card col-md-4">
+                <div class="card-body">
+                    <div class="review-header d-flex align-items-center mb-2">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Freview%204.jpg?alt=media&token=77f49da8-3266-4401-88f7-26e39eefe615" alt="Review 4">
+                        <h3 class="h5 mb-0">Abhishek Magar</h3>
+                    </div>
+                    <p class="card-text">I've enjoyed exploring the offerings of this e-library site. It features a comprehensive selection of books that cover a wide range of topics, which is impressive. However, the site's interface feels a bit outdated and could benefit from some updates to enhance user experience. Still, it's a solid choice for avid readers.</p>
+                    </div>
+                    <div class="text-warning icon star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                    </div>                    
+            </div>
+        </div>
+       </div>
+     </section>
+     <br>
+     <section class="contact" id="contact">
+        <h1 class="cheading">Contact Us <i class="fas fa-comments icon"></i></h1>
+        <div class="contacts">
+        <h1>SEND US AN EMAIL</h1>
+        <p>WE ARE VERY REPOSITIVE TO MESSAGE</p>
+    <form class="form-container" action="https://formsubmit.co/gauravprajapati041@gmail.com" method="POST">
+        <input type="name" name="name" id="name" placeholder="Name" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+        <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+        <input type="submit" value="Send Message" class="button"/>
+       <input type="hidden" name="_cc" value="pradnyatavandkar25@gmail.com,samarthpharate96@gmail.com"/>
+        <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fthanku.html?alt=media&token=1adc93e0-f34c-4a0a-9e82-8de4bf9c4171"
+              />
+              <input type="hidden" name="_template" value="table" />
+    </form>
+    </div>
+     </section>
+     <br>
+     <section class="about" id="about">
+     <h2>About Us <i class="fas fa-user icon"></i></h2>
+     <div class="about-us">
+        <div class="profiles">
+            <div class="profile-card">
+                <img src="https://firebasestorage.googleapis.com/v0/b/samarthpharate-96.appspot.com/o/Portfolio%2FImage%2Fsamimg.jpg?alt=media&token=4d601409-e912-4440-8f5d-bd31c22d3a24" alt="Profile Picture">
+                <h3>Samarth Pharate</h3>
+                <a href="https://samarthpharate-96.web.app/" class="portfolio-i">Portfolio <i class="fas fa-briefcase icon"></i></a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/samarth_pharate_96k"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/samarthpharate"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/samarth-pharate-873b23259"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto: samarthpharate96@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="profile-card">
+                <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fgaurav.jpg?alt=media&token=d1a65c6a-337e-4766-831d-5b111f5a1e14">
+                <h3>Gaurav Prajapati</h3>
+                <a href="https://itsgaurav-23.web.app/" class="portfolio-i">Portfolio <i class="fas fa-briefcase icon"></i></a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/its_gaurav._.23"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/gauravprajapati23"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gaurav-prajapati-b08505259"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:gauravprajapati041@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="profile-card">
+                <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2FPradnya.jpg?alt=media&token=b535f695-380d-49ba-86d5-fa72a622379b">
+                <h3>Pradnya Tavandkar</h3>
+                <a href="https://pradnyatavandkar.web.app/" class="portfolio-i">Portfolio <i class="fas fa-briefcase icon"></i></a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/its_pradnya_25_?igsh=aGc2NWZ0N3hxNmtv"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/pradnyatavandkar25"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/pradnya-tavandkar-511756315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto: pradnyatavandkar25@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+     </main>
+     <footer>
+        <div class="footer-container">
+            <img src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Flogo%20sgp.png?alt=media&token=9c980246-b718-4fe5-9542-1e37138fde50" alt="Company Logo">
+            <br>
+            <ul class="list-container">
+                <h2>Quick Links<i class="fas fa-link icon"></i></h2>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <br>
+            <ul class="list-container">
+                <h2>Follow Us <i class="fas fa-user-plus icon"></i></h2>
+                <li><a href="#https://samarthpharate-96.web.app/">Samarth Pharate <i class="fas fa-briefcase icon"></i></a></li>
+                <li><a href="https://itsgaurav-23.web.app/">Gaurav Prajapati <i class="fas fa-briefcase icon"></i></a></li>
+                <li><a href="https://pradnyatavandkar.web.app/">Pradnya Tavandkar <i class="fas fa-briefcase icon"></i></a></li>
+            </ul>
+            <br>
+            <ul class="list-container">
+                <h2>E-mails <i class="fas fa-envelope icon"></i></h2>
+                <li><a href="mailto: samarthpharate96@gmail.com">samarthpharate96@gmail.com</a></li>
+                <li><a href="mailto: gauravprajapati041@gmail.com">gauravprajapati041@gmail.com</a></li>
+                <li><a href="mailto: pradnyatavandkar25@gmail.com">pradnyatavandkar25@gmail.com</a></li>
+            </ul>
+            <br>
+            <form class="f-form-container" action="https://formsubmit.co/gauravprajapati041@gmail.com" method="POST">
+                <input type="name" name="name" id="name" class="f-name" placeholder="Your Name" required/>
+                <input type="message" name="message" id="message" class="f-message" placeholder="Which book do you need? " required/>
+                <input type="submit" class="f-submit" value="Submit"/>
+                <input type="hidden" name="_captcha" value="false" />           
+              <input type="hidden" name="_cc" value="samarthpharate96@gmail.com,pradnyatavandkar25@gmail.com"/>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fthanku.html?alt=media&token=1adc93e0-f34c-4a0a-9e82-8de4bf9c4171"
+              />
+              <input type="hidden" name="_template" value="table" />
+            </form>
+        </div>
+        <br>
+        <div class="company-name">
+            &copy; 2024 <span class="spanred">SGP Developers</span>.
+        </div>
+    </footer>
+    </main>
+    <div class="security">
+    <div class="s-body">
+    <!-- Login Form -->
+    <div id="loginForm" class="s-form-container ">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <span id="loginError" class="error-message"></span>
+        <br>
+        <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
+    </div>
+    
+    <!-- Signup Form -->
+    <div id="signupForm" class="s-form-container" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+        <span id="signupError" class="error-message"></span>
+        <br>
+        <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+    </div>
+    </div>
+   </div>
+    <script src="https://firebasestorage.googleapis.com/v0/b/coderc-23.appspot.com/o/E-Library%2Fscript.js?alt=media&token=74227dba-129d-40ac-9df9-e8e291edbec6"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/itsgaurav-23.appspot.com/o/Privacy%2Fprivacy.js?alt=media&token=46db7266-a036-463d-85b1-acb86ada90b5"></script>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <!-- Your Firebase Configuration -->
+    <script>
+        // Replace with your Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBjoxOi1qbVbeIY7Z-tD8A0w6pvrLSlNds",
+            authDomain: "coderc-23.firebaseapp.com",
+            projectId: "coderc-23",
+            storageBucket: "coderc-23.appspot.com",
+            messagingSenderId: "270020302798",
+            appId: "1:270020302798:web:a2bc433470c79f0afb7d9f"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Check if user is already logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in, show main section and hide login/signup forms
+                document.getElementById("mainSection").style.display = "block";
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("signupForm").style.display = "none";
+            } else {
+                // No user is signed in, show login form by default
+                document.getElementById("loginForm").style.display = "block";
+            }
+        });
+
+        // Function to show login form and hide signup form
+        function showLoginForm() {
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("signupForm").style.display = "none";
+            document.getElementById("loginError").innerText = "";
+            document.getElementById("signupError").innerText = "";
+        }
+
+        // Function to show signup form and hide login form
+        function showSignupForm() {
+            document.getElementById("signupForm").style.display = "block";
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("loginError").innerText = "";
+            document.getElementById("signupError").innerText = "";
+        }
+
+        // Function to toggle password visibility
+        function togglePassword(inputId) {
+            var passwordInput = document.getElementById(inputId);
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+
+        // Login function
+        function login() {
+            var email = document.getElementById("loginEmail").value;
+            var password = document.getElementById("loginPassword").value;
+
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+                .then(() => {
+                    return firebase.auth().signInWithEmailAndPassword(email, password)
+                        .then((userCredential) => {
+                            var user = userCredential.user;
+                            // Clear input fields and errors
+                            document.getElementById("loginEmail").value = "";
+                            document.getElementById("loginPassword").value = "";
+                            document.getElementById("loginError").innerText = "";
+                        })
+                        .catch((error) => {
+                            console.error("Login Error:", error);
+                            document.getElementById("loginError").innerText = "Invalid credentials";
+                        });
+                })
+                .catch((error) => {
+                    console.error("Persistence Error:", error);
+                });
+        }
+
+        // Signup function
+        function signup() {
+            var email = document.getElementById("signupEmail").value;
+            var password = document.getElementById("signupPassword").value;
+
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+                .then(() => {
+                    return firebase.auth().createUserWithEmailAndPassword(email, password)
+                        .then((userCredential) => {
+                            var user = userCredential.user;
+                            // Clear input fields and errors
+                            document.getElementById("signupEmail").value = "";
+                            document.getElementById("signupPassword").value = "";
+                            document.getElementById("signupError").innerText = "";
+                            // After signup, show login form
+                            showLoginForm();
+                        })
+                        .catch((error) => {
+                            if (error.code === 'auth/email-already-in-use') {
+                                document.getElementById("signupError").innerText = "User already exists";
+                            } else {
+                                console.error("Signup Error:", error);
+                                document.getElementById("signupError").innerText = "Failed to sign up";
+                            }
+                        });
+                })
+                .catch((error) => {
+                    console.error("Persistence Error:", error);
+                });
+        }
+
+        // Logout function
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                // Sign-out successful, hide main section and show login form
+                document.getElementById("mainSection").style.display = "none";
+                document.getElementById("loginForm").style.display = "block";
+                document.getElementById("signupForm").style.display = "none";
+            }).catch((error) => {
+                console.error("Logout Error:", error);
+            });
+        }
+    </script>
+</body>
+</html>
